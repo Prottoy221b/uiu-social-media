@@ -4,6 +4,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* =========================
+   LOGIN & REGISTRATION
+   SHARED
+   ========================= */
+
 .registration,
 .logIn {
   background-image: url(../img/Campus_pic.jpg);
@@ -13,6 +19,7 @@
   display: flex;
   max-height: 100vh;
 }
+
 .left {
   display: flex;
   flex-direction: column;
@@ -27,11 +34,13 @@
   height: 424px;
   padding-left: 45px;
 }
+
 .left h1,
 .left p,
 .left footer {
   padding-left: 45px;
 }
+
 footer {
   margin-top: auto;
   font-size: 20px;
@@ -42,24 +51,24 @@ footer {
   flex: 70%;
 }
 
+
+/* =========================
+   LOGIN PAGE
+   ========================= */
+
 .login_section {
   display: flex;
   flex-direction: column;
   padding: 33%;
   gap: 20px;
 }
+
 .signin_createAccount {
   background-color: #a19090;
   border-radius: 20px;
 
   display: flex;
   justify-content: space-between;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .logIn .create {
@@ -71,6 +80,7 @@ form {
   font-size: 20px;
   flex: 1;
 }
+
 .logIn .Active {
   background-color: white;
   color: black;
@@ -82,6 +92,12 @@ form {
   border: 3px solid #a19090;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .right p,
 h1 {
   padding: 0px;
@@ -91,20 +107,24 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+
 .pass_fgpass a {
   text-decoration: none;
   color: rgb(246, 107, 38);
 }
+
 input {
   padding: 14px;
   border-radius: 10px;
   background-color: #a19090;
   border: none;
 }
+
 input::placeholder {
   color: white;
   font-size: 18px;
 }
+
 label {
   font-weight: bold;
   font-size: 20px;
@@ -121,10 +141,16 @@ form button {
 .signIn {
   background-color: rgb(246, 107, 38);
 }
+
 .requestAccount {
   background-color: rgb(246, 107, 38);
   margin-top: 18px;
 }
+
+
+/* =========================
+   REGISTRATION PAGE
+   ========================= */
 
 .registration_section {
   display: flex;
@@ -145,6 +171,7 @@ form button {
   font-size: 20px;
   flex: 1;
 }
+
 .registration .Active {
   background-color: white;
   color: black;
@@ -161,6 +188,7 @@ form button {
   justify-content: space-between;
   gap: 15px;
 }
+
 .accountOption input {
   display: none;
 }
@@ -178,6 +206,7 @@ form button {
   background-color: rgb(246, 107, 38);
   color: black;
 }
+
 .department {
   display: flex;
   flex-direction: column;
@@ -197,6 +226,7 @@ form button {
   font-size: 20px;
 
 }
+
 .accountType{
   display: flex;
   flex-direction: column;
@@ -204,26 +234,55 @@ form button {
 }
 
 
+/* =========================
+   HOME PAGE
+   MAIN LAYOUT
+   ========================= */
+
+.home_main{
+  background-color: #f5f0f0;
+  display: flex;
+  gap: 80px;
+}
+
+.home_left{
+  display: flex;
+  flex-direction: column;
+  flex:20%;
+}
+
+.home_middle{
+  flex:60%;
+}
+
+.home_right{
+  flex:20%;
+}
+
+
+/* =========================
+   HOME HEADER
+   ========================= */
+
 .home_header{
   display: flex;
   gap: 30px;
-  
-  
 }
+
 .home_header h1{
   color: orangered;
   padding-top: 10px;
 }
+
 .home_header .logo{
   padding-left: 5px;
-  
   width: 70px;
   height: 70px;
 }
+
 .home_header input{
   height: 15px;
   width: 380px;
- 
   margin-top: 10px;
 }
 
@@ -232,10 +291,14 @@ form button {
   gap: 20px;
   margin-top: 10px;
 }
-.home_logo,.event_logo,.my_profile_logo{
+
+.home_logo,
+.event_logo,
+.my_profile_logo{
   width: 40px;
   height: 40px;
 }
+
 .group_logo{
   height: 50px;
   width: 50px;
@@ -246,8 +309,11 @@ form button {
   gap: 20px;
   margin-top: 10px;
 }
-.message_logo,.notification_logo,.profile_pic{
-width: 40px;
+
+.message_logo,
+.notification_logo,
+.profile_pic{
+  width: 40px;
   height: 40px;
 }
 
@@ -255,68 +321,66 @@ width: 40px;
   display: flex;
   flex-direction: column;
   margin-left: 0px;
-  
 }
 
 .profile_name{
   font-weight: bold;
 }
+
 .user_category{
   background-color: rgb(141, 141, 245);
   border-radius: 10px;
   width: 80px;
   height: 25px;
-  
-  
 }
 
 .user_category p{
   text-align: center;
   margin-top: 2px;
   font-weight: bold;
-
 }
+
+
+/* =========================
+   HOME LEFT SIDEBAR
+   ========================= */
+
+.home_left_top,
+.home_left_bottom{
+  background-color: white;
+  padding: 20px;
+  border-radius: 17px;
+  margin: 30px;
+}
+
 .profile_details{
   display: flex;
   gap: 15px;
-  
-  
-}
-.profile_details p{
-  text-align: center;
-  
 }
 
-.home_main{
-  background-color: #f5f0f0;
-  display: flex;
-  gap: 80px;
+.profile_details p{
+  text-align: center;
 }
-.home,.groups,.events,.message,.notification,.my_profile{
+
+.home,
+.groups,
+.events,
+.message,
+.notification,
+.my_profile{
   display: flex;
   gap: 15px;
-  
 }
-.home p,.groups p,.events p,.message p,.notification p,.my_profile p
+
+.home p,
+.groups p,
+.events p,
+.message p,
+.notification p,
+.my_profile p
 {
   margin-top: 15px;
 }
-.home_left{
-  display: flex;
-  flex-direction: column;
-  flex:20%;
-}
-
-.cse_grp,.robotic_grp,.dsa_grp,.batch_grp{
-  height: 40px;
-  width: 40px;
-}
-
-.cse_groups,.robotic_groups,.batch_groups,.DSA_groups{
-  display: flex;
-  gap: 15px;
-}
-
 
 .home_left_bottom{
   display: flex;
@@ -324,19 +388,41 @@ width: 40px;
   gap: 20px;
 }
 
-.home_middle{
-  flex:60%;
+.cse_grp,
+.robotic_grp,
+.dsa_grp,
+.batch_grp{
+  height: 40px;
+  width: 40px;
 }
-.home_right{
-  flex:20%;
+
+.cse_groups,
+.robotic_groups,
+.batch_groups,
+.DSA_groups{
+  display: flex;
+  gap: 15px;
 }
-.home_left_top,.home_left_bottom,.home_right_top,.home_right_bottom,.home_right_middle{
-  background-color: white;
-  padding: 20px;
-  border-radius: 17px;
-  margin: 30px;
- 
+
+.grp_name {
+  font-weight: bold;
 }
+
+.see_more_groups{
+  color: orangered;
+  text-align: center;
+}
+
+.your_groups{
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* =========================
+   HOME MIDDLE
+   CREATE POST
+   ========================= */
 
 .home_middle_top{
   display: flex;
@@ -346,21 +432,277 @@ width: 40px;
   padding: 10px;
   margin: 20px;
 }
+
 .home_middle_top_top{
   display: flex;
   gap: 20px;
-}
-.home_middle_top_top input{
-  height: 12px;
-  width: 780px;
-  
-  
+  padding-bottom: 30px;
+  border-bottom:1px solid gray;
 }
 
-.home_middle_middle,.home_middle_bottom{
+.home_middle_top_top input{
+  height: 12px;
+  border-radius: 22px;
+  width: 760px;
+}
+
+.home_middle_bottom_bottom{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.photo_logo,
+.video_logo,
+.article_logo{
+  height: 45px;
+  width: 45px;
+}
+
+
+/* =========================
+   HOME MIDDLE
+   ANNOUNCEMENT POST
+   ========================= */
+
+.home_middle_middle,
+.home_middle_bottom{
   background-color: white;
   border-radius: 17px;
   padding: 10px;
   margin: 20px;
 }
+
+.home_middle_middle_top{
+  background-color: #fcdfb2;
+  display: flex;
+  border-radius: 10px;
+}
+
+.home_middle_middle_top p{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.home_middle_middle_middle{
+  display: flex;
+  gap: 16px;
+}
+
+.others_name{
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.nusrat_pic{
+  height: 60px;
+  width: 60px;
+}
+
+.home_middle_posts,
+.middle_posts{
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   POST ENGAGEMENT
+   ========================= */
+
+.like_comment_counter,
+.home_middle_middle_bottom{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.like,
+.comment,
+.share{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.like_logo{
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+}
+
+.comment_logo{
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+.share_logo{
+  height: 45px;
+  width: 45px;
+}
+
+
+/* =========================
+   HOME MIDDLE
+   SECOND POST
+   ========================= */
+
+.home_middle_bottom_top{
+  display: flex;
+  gap: 20px;
+}
+
+.hash_tags{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+.post_pic{
+  width: 100%;
+}
+
+
+/* =========================
+   HOME RIGHT SIDEBAR
+   ========================= */
+
+
+   .home_right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 20%; 
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.home_right_top,.home_right_middle, .home_right_bottom {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 10px;
+}
+.event1,.event2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+
+}
+.date{
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  min-width: 55px;
+  border: 2px solid #ff6b26; 
+  border-radius: 25%;
+}
+
+
+.event_name h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+.event_name p {
+  font-size: 12px;
+  color: #65676b;
+  margin-top: 2px;
+}
+
+.see_all_events {
+  color: #ff6b26;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+
+
+.person1, .person2, .person3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.person1 img,.people1 img,.people2 img, .person2 img, .person3 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  /* object-fit: cover; */
+  border: 2px solid #ff6b26;
+}
+
+.name_title {
+  flex: 1;
+}
+
+.name_title .others_name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #050505;
+}
+
+.name_title p:last-child {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.follow {
+  background-color: #ff6b26;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.headline{
+  padding-bottom: 10px;
+  font-size: medium;
+}
+
+.online_people {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.people1, .people2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.people1 .others_name, .people2 .others_name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #050505;
+}
+
+.home_right footer {
+  padding: 0;
+  margin-top: 15px;
+  text-align: center;
+   font-size: 11px;
+  color: #8a8d91;
+  line-height: 1.4;
+}
+
 
