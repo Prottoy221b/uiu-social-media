@@ -1,0 +1,232 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.registration,
+.logIn {
+  background-image: url(../img/Campus_pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  max-height: 100vh;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgb(246, 107, 38, 0.8);
+  flex: 30%;
+  min-height: 100vh;
+}
+
+.logo {
+  width: 424px;
+  height: 424px;
+  padding-left: 45px;
+}
+.left h1,
+p,
+footer {
+  padding-left: 45px;
+}
+footer {
+  margin-top: auto;
+  font-size: 20px;
+}
+
+.right {
+  background-color: rgb(255, 255, 255, 0.7);
+  flex: 70%;
+}
+
+.login_section {
+  display: flex;
+  flex-direction: column;
+  padding: 33%;
+  gap: 20px;
+}
+.signin_createAccount {
+  background-color: #a19090;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logIn .create {
+  background-color: #a19090;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  flex: 1;
+}
+.logIn .Active {
+  background-color: white;
+  color: black;
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 3px solid #a19090;
+}
+
+.right p,
+h1 {
+  padding: 0px;
+}
+
+.pass_fgpass {
+  display: flex;
+  justify-content: space-between;
+}
+.pass_fgpass a {
+  text-decoration: none;
+  color: rgb(246, 107, 38);
+}
+input {
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #a19090;
+  border: none;
+}
+input::placeholder {
+  color: white;
+  font-size: 18px;
+}
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+form button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.signIn {
+  background-color: rgb(246, 107, 38);
+}
+.requestAccount {
+  background-color: rgb(246, 107, 38);
+  margin-top: 18px;
+}
+
+.registration_section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 23%;
+  padding-bottom: 23%;
+  padding-left: 30%;
+  padding-right: 30%;
+  gap: 20px;
+}
+
+.registration .signIn {
+  background-color: #a19090;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  flex: 1;
+}
+.registration .Active {
+  background-color: white;
+  color: black;
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 3px solid #a19090;
+}
+
+.accountOption {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.accountOption input {
+  display: none;
+}
+
+.accountOption label {
+  padding: 10px;
+
+  padding-left: 14%;
+  padding-right: 14%;
+  background-color: white;
+  border-radius: 14px;
+}
+
+.accountOption input:checked + label {
+  background-color: rgb(246, 107, 38);
+  color: black;
+}
+.department {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.department select {
+  padding: 10px;
+  background-color:#a19090 ;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.accountType p{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.accountType{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.home_header{
+  display: flex;
+  gap: 20px;
+  
+  
+}
+.home_header h1{
+  color: orangered;
+  padding-top: 10px;
+}
+.home_header .logo{
+  padding-left: 5px;
+  
+  width: 70px;
+  height: 70px;
+}
+.home_header input{
+  height: 15px;
+  width: 380px;
+  
+  margin-top: 10px;
+}
+
+.home_main{
+  background-color: #f5f0f0;
+}
