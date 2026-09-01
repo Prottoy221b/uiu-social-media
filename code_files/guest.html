@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guest View - UIU Social Media</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="home_main">
+        <div class="home_left">
+            <div class="home_left_top">
+
+
+
+                <div class="profile_details">
+
+                    <img src="../img/profile_pic.jpg"
+                        alt="Profile Picture"
+                        class="profile_pic">
+
+                    <div class="name_category">
+
+                        <div class="profile_name">
+                            <p>Guest User</p>
+                        </div>
+
+                        <div class="user_category_guest">
+                            <p>Guest</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <nav>
+
+                    <div class="home">
+
+                        <img src="../img/home.jpg"
+                            alt="Home Logo"
+                            class="home_logo">
+
+                        <p class="orangered">
+                            Home Feed
+                        </p>
+
+                    </div>
+
+
+                    <div class="groups">
+
+                        <img src="../img/group.jpg"
+                            alt="Groups Logo"
+                            class="group_logo">
+
+                        <p>Groups</p>
+
+                    </div>
+
+
+                    <div class="events"
+                        onclick="window.location.href='event.html'">
+
+                        <img src="../img/event.jpg"
+                            alt="Events Logo"
+                            class="event_logo">
+
+                        <p>Events</p>
+
+                    </div>
+
+
+                    <div class="message"
+                        onclick="window.location.href='message.html'">
+
+                        <img src="../img/message.jpg"
+                            alt="Message Logo"
+                            class="message_logo">
+
+                        <p>Messages</p>
+
+                    </div>
+
+
+                    <div class="notification">
+
+                        <img src="../img/notification.jpg"
+                            alt="Notification Logo"
+                            class="notification_logo">
+
+                        <p>Notifications</p>
+
+                    </div>
+
+
+                    <div class="my_profile"
+                        onclick="window.location.href='login.html'">
+
+                        <i class="fa-solid fa-right-to-bracket"
+                            style="font-size:20px; color:#555;">
+                        </i>
+
+                        <p>Login / Register</p>
+
+                    </div>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <div class="home_middle">
+
+
+            <div class="guest_notice">
+
+                <div>
+                    <strong>Guest Mode:</strong>
+                    You are viewing UIU Social Media as a guest.
+                    Login to post or interact.
+                </div>
+
+                <button onclick="window.location.href='login.html'">
+                    Login
+                </button>
+
+            </div>
+
+
+            <div class="home_middle_middle">
+
+                <div class="home_middle_middle_top">
+
+                    <img src="../img/danger_logo.jpg"
+                        alt="Announcement">
+
+                    <p>
+                        OFFICIAL ANNOUNCEMENT
+                    </p>
+
+                </div>
+
+
+                <div class="home_middle_middle_middle">
+
+                    <img src="../img/nusrat.jpg"
+                        alt="Nusrat"
+                        class="nusrat_pic">
+
+                    <div>
+
+                        <p class="others_name">
+                            Dr. Nusrat Jahan
+                        </p>
+
+                        <p>1h ago</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home_middle_posts">
+
+                    <p>
+                        📢 Important announcement: The Mid-Term Exam
+                        schedule for CSE 3102 (Data Structures) has been
+                        updated. Please check the university portal for
+                        the revised timetable. All students of Batch 41
+                        and 42 are required to confirm attendance.
+                    </p>
+
+                </div>
+
+
+                <div class="like_comment_counter">
+
+                    <p>123 Likes</p>
+
+                    <p>23 Comments</p>
+
+                    <p>11 Shares</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="home_middle_bottom">
+
+                <div class="home_middle_bottom_top">
+
+                    <img src="../img/bean.jpg"
+                        alt="Kazi Faisal">
+
+                    <div>
+
+                        <p class="others_name">
+                            Kazi Faisal Ahmed
+                        </p>
+
+                        <p>1h ago</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="middle_posts">
+
+                    <p>
+                        Just wrapped up our team's project on Smart
+                        Garbage Management using IoT! 🚀 Three months
+                        of late-night sessions, debugging sessions,
+                        and countless cups of tea — totally worth it.
+                    </p>
+
+                    <p class="hash_tags">
+                        #UIU #CSE #IoT #SmartCity
+                    </p>
+
+                    <img src="../img/post.jpg"
+                        alt="Post Picture"
+                        class="post_pic">
+
+                </div>
+
+
+                <div class="like_comment_counter">
+
+                    <p>436 Likes</p>
+
+                    <p>45 Comments</p>
+
+                    <p>32 Shares</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <style>
+
+        .guest_notice {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 20px;
+            border: 1px solid #ffeeba;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 14px;
+        }
+
+        .guest_notice button {
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            padding: 7px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    </style>
+
+</body>
+
+</html>
