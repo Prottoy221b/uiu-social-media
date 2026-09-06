@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- =========================
+                    HOME HEADER
+            =========================  -->
+
+    <div id="header"></div>
+
+    <!-- =========================
+                        MAIN PART
+            ========================= -->
+
+    <main class="home_main">
+        <div id="left-sidebar"></div>
+
+        <!-- =========================
+                        HOME MIDDLE CONTENT START
+                ========================= -->
+
+        <div class="home_middle">
+            <div class="event_top">
+                <div class="event_top_left">
+                    <h2>Events</h2>
+                    <p>Seminars, fests, and meetups happening at UIU.</p>
+                </div>
+                <div class="event_top_right">
+                    <div class="event_btn">
+                        <button class="create_event_btn">Create Event</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="event_form">
+                <input type="text" class="event_title_input" placeholder="Event Title">
+                <input type="date" class="event_date_input" >
+                <input type="time" class="event_time_input">
+                <input type="text" class="event_location_input" placeholder="Location">
+
+                <button class="submit_event_btn">Create</button>
+            </div>
+
+            <div class="event_cards">
+                <div class="event_card1 event_template">
+                    <div class="event_banner">
+                        <img src="../img/image 58.jpg" alt="CSE Symposium" />
+                    </div>
+                    <div class="event_details">
+                        <div class="event_top_row">
+                            <span class="badge">ACADEMIC</span>
+                            <button class="going_btn">Going ✓</button>
+                        </div>
+                        <h3 class="event_title">CSE Research Symposium 2024</h3>
+                        <p class="event_info">📅 Nov 18, 2024 - 10:00 AM</p>
+                        <p class="event_info">🌐 UIU Auditorium, Block A</p>
+                        <p class="event_subtext">By Dept. of CSE · 312 attending</p>
+                    </div>
+                </div>
+                <div class="event_card2">
+                    <div class="event_banner">
+                        <img src="../img/image 62.jpg" alt="CSE Symposium" />
+                    </div>
+                    <div class="event_details">
+                        <div class="event_top_row">
+                            <span class="badge">CULTURAL</span>
+                            <button class="going_btn">Interested ✓</button>
+                        </div>
+                        <h3 class="event_title">UIU Annual Cultural Fest</h3>
+                        <p class="event_info">
+                            <span>📅</span><span>Nov 18, 2024 - 10:00 AM</span>
+                        </p>
+                        <p class="event_info">
+                            <span>🌐</span><span>UIU Auditorium, Block A</span>
+                        </p>
+                        <p class="event_subtext">By Dept. of CSE · 312 attending</p>
+                    </div>
+                </div>
+                <div class="event_card3">
+                    <div class="event_banner">
+                        <img src="../img/image 89.jpg" alt="AI in Healthcare" />
+                    </div>
+                    <div class="event_details">
+                        <div class="event_top_row">
+                            <span class="badge">MEDICAL</span>
+                            <button class="going_btn">Going ✓</button>
+                        </div>
+                        <h3 class="event_title">INDUSTRY TALK: AI IN HEALTHCARE</h3>
+                        <p class="event_info">
+                            <span>📅</span>
+                            <span>Dec 12, 2024 - 02:00 PM</span>
+                        </p>
+                        <p class="event_info">
+                            <span>🌐</span>
+                            <span>Smart Class Room, Block B</span>
+                        </p>
+                        <p class="event_subtext">By UIU Computer Club · 150 attending</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================
+                        HOME MIDDLE CONTENT END
+                ========================= -->
+
+        <div id="right-sidebar"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
