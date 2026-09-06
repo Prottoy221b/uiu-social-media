@@ -567,8 +567,9 @@ form button {
 
 .comments_list {
   display: flex;
+  
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
   margin-bottom: 10px;
 }
 
@@ -595,7 +596,7 @@ form button {
 }
 
 .comment_text {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .comment_input_box {
@@ -754,7 +755,10 @@ form button {
   border: 2px solid #ff6b26; 
   border-radius: 25%;
 }
-
+.follow.active{
+  background-color: #ebe0da;
+  color: #000;
+}
 .event_name h3 {
   font-size: 17px;
   font-weight: bold;
@@ -944,6 +948,11 @@ form button {
     border-radius: 10px;
    }
 
+   .join.active{
+    color: black;
+    background-color: #65676b;
+   }
+
    /* =========================
    EVENT PAGE
    ========================= */
@@ -1072,6 +1081,49 @@ form button {
   font-weight: 600;
   cursor: pointer;
 }
+.going_btn.active{
+   background-color: #ff5700;
+    color: white;
+    border-color: #ff5700;
+}
+
+
+
+
+/* =========================
+   CREATE EVENT
+   ========================= */
+.event_form{
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+.event_form input{
+  background-color: rgb(214, 209, 209);
+  margin-left:20px ;
+  margin-right: 20px;
+}
+
+.event_form button{
+  padding: 9px;
+  border-radius: 10px;
+  background-color: #f46231;
+  color: white;
+  font-size: 20px;
+  margin-left:20px ;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: none;
+
+}
+
+
+
+
+
+
 
 /* =========================
     Notifications
