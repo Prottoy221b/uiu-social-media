@@ -474,6 +474,7 @@ form button {
 }
 
 .home_middle_top_top input{
+  display: flex;
   height: 18px;
   border-radius: 20px;
   width: 760px;
@@ -492,6 +493,41 @@ form button {
 .article_logo{
   height: 45px;
   width: 45px;
+}
+
+.post_create_area{
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 25px ;
+}
+.post_create_area textarea{
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 10px;
+}
+
+.post_options{
+  display: flex;
+  justify-content: space-between;
+}
+.post_options button{
+  padding: 5px;
+  background-color: #83a4e7;
+  border-radius: 6px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.create_post_btn{
+  padding: 5px;
+  background-color: #F4511E;
+  border-radius: 10px;
+  border: none;
+  color: white;
 }
 
 
@@ -949,7 +985,8 @@ form button {
    }
 
    .join.active{
-    color: black;
+    
+    color: rgb(255, 255, 255);
     background-color: #65676b;
    }
 

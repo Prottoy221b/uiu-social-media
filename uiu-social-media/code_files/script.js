@@ -1,3 +1,32 @@
+const header=document.querySelector("#header");
+fetch("header.html")
+.then(function(response){
+  return response.text();
+
+})
+.then(function(data){
+  header.innerHTML=data;
+})
+
+const left=document.querySelector("#left-sidebar");
+fetch("left-sidebar.html")
+.then(function(response){
+  return response.text();
+})
+.then(function(data){
+  left.innerHTML=data;
+})
+
+
+const right=document.querySelector("#right-sidebar");
+fetch("right-sidebar.html")
+.then(function(response){
+  return response.text();
+})
+.then(function(data){
+  right.innerHTML=data;
+})
+
 const likeButtons=document.querySelectorAll(".action_btn.like");
 likeButtons.forEach(function(likeButton){
   likeButton.addEventListener("click", function(){
@@ -136,6 +165,7 @@ follows.forEach(function(follow){
     
     if(this.classList.contains("active")){
       this.classList.remove("active");
+      this.textContent="+Follow";
     }else{
       this.classList.add("active");
       this.textContent="Followed";
@@ -147,12 +177,69 @@ follows.forEach(function(follow){
 const joins=document.querySelectorAll(".join");
 joins.forEach(function(join){
   join.addEventListener("click",function(){
-    if(this.classList.contains("activate")){
+    if(this.classList.contains("active")){
       this.classList.remove("active");
+      this.textContent="+Join";
     }else{
       this.classList.add("active");
       this.textContent="Joined";
-      console.log("active");
+      
     }
   })
 })
+
+
+
+const postInput=document.querySelector(".post_input");
+
+const postCreateArea=document.querySelector(".post_create_area");
+postInput.addEventListener("click", function(){
+  postCreateArea.style.display="flex";
+  postInput.style.display="none";
+  const createPostButton=document.querySelector(".create_post_btn");
+  createPostButton.addEventListener("click",function(){
+    const postText=document.querySelector(".post_text");
+    const postTemplate=document.querySelector(".post_template");
+    const newPost=postTemplate.cloneNode(true);
+    const newPostText=newPost.querySelector(".home_middle_posts p");
+    newPostText.textContent=postText.value;
+    
+    const postsFeed=document.querySelector(".posts_feed");
+    const newLikeCount=newPost.querySelector(".like-count");
+    newLikeCount.textContent="0 Likes";
+
+    
+    postsFeed.prepend(newPost);
+
+
+    const newLikeButton=newPost.querySelector(".action_btn.like");
+    newLikeButton.addEventListener("click",function(){
+      const likeCount=newPost.querySelector(".like-count");
+      const number=parseInt(likeCount.textContent);
+      const icon=newLikeButton.querySelector("i");
+      if(newLikeButton.classList.contains("liked")){
+    
+    newLikeButton.classList.remove("liked");
+    icon.className = "fa-regular fa-thumbs-up";
+    likeCount.textContent = (number - 1) + " Likes";
+
+}
+else{
+    
+    newLikeButton.classList.add("liked");
+    icon.className = "fa-solid fa-thumbs-up";
+    likeCount.textContent = (number + 1) + " Likes";
+
+}
+    })
+postCreateArea.style.display="none";
+  postInput.style.display="flex";
+  postText.value="";
+
+
+
+  });
+
+  
+});
+

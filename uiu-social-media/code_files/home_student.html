@@ -13,18 +13,18 @@
     <!-- =========================
                     HOME HEADER
             =========================  -->
-    
-            <div id="header"></div>
 
-        <!-- =========================
+    <div id="header"></div>
+
+    <!-- =========================
                         MAIN
             ========================= -->
 
-        <main class="home_main">
+    <main class="home_main">
 
-            <div id="left-sidebar"></div>
+        <div id="left-sidebar"></div>
 
-             <!-- =========================
+        <!-- =========================
                         HOME MIDDLE CONTENT START
                 ========================= -->
 
@@ -32,8 +32,25 @@
 
             <div class="home_middle_top">
                 <div class="home_middle_top_top">
-                    <div class="profile_pic"><img src="../img/profile_pic.jpg" alt="Profile Picture" class="profile_pic" /></div>
-                    <input type="text" name="" id="" placeholder="Whats on your mind, Mohammad Ronaldo?">
+                    <div class="profile_pic"><img src="../img/profile_pic.jpg" alt="Profile Picture"
+                            class="profile_pic" /></div>
+                    <div class="post_input"><input type="text" name="" id=""
+                            placeholder="Whats on your mind, Mohammad Ronaldo?"></div>
+                    <div class="post_create_area">
+
+                        <textarea class="post_text" placeholder="What's on your mind, Mohammad Ronaldo?">
+        </textarea>
+
+                        <div class="post_options">
+                            <button>Photo</button>
+                            <button>Video</button>
+                            <button>Article</button>
+                        </div>
+
+                        <button class="create_post_btn">Post</button>
+
+                    </div>
+
                 </div>
 
                 <div class="home_middle_bottom_bottom">
@@ -45,10 +62,11 @@
                     </div>
                     <ddiv class="article"><img src="../img/article_logo.jpg" alt="article logo" class="article_logo">
                         <p>Article</p>
-                    </div>
                 </div>
-            
-             <div class="home_middle_middle">
+            </div>
+
+           <div class="posts_feed">
+             <div class="home_middle_middle post_template">
 
                 <div class="home_middle_middle_top">
                     <i class="fa-solid fa-bullhorn"></i>
@@ -90,18 +108,18 @@
                 </div>
 
                 <!-- Comment Section -->
-            <div class="comment_section">
-                <div class="comments_list"></div>
+                <div class="comment_section">
+                    <div class="comments_list"></div>
 
-                <div class="comment_input_box">
-                    <img src="../img/profile_pic.jpg" alt="User Profile" class="comment_user_pic">
-        
-                    <div class="comment_field_wrapper">
-                        <input type="text" class="comment_input" placeholder="Write a comment...">
-                        <button class="send_comment_btn" type="button">Post</button>
+                    <div class="comment_input_box">
+                        <img src="../img/profile_pic.jpg" alt="User Profile" class="comment_user_pic">
+
+                        <div class="comment_field_wrapper">
+                            <input type="text" class="comment_input" placeholder="Write a comment...">
+                            <button class="send_comment_btn" type="button">Comment</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             <div class="home_middle_bottom">
@@ -117,53 +135,55 @@
                     <p>Just wrapped up our team's project on Smart Garbage Management using IoT! 🚀 Three months of
                         late-night sessions, debugging sessions, and countless cups of tea — totally worth it.
                         Presenting at the CSE Research Symposium next week. Wish us luck! 💻</p>
-                    <p class="hash_tags">#UIU #CSE #IoT #SmartCity</p> <img src="../img/post.jpg" alt="Post pic" class="post_pic">
+                    <p class="hash_tags">#UIU #CSE #IoT #SmartCity</p> <img src="../img/post.jpg" alt="Post pic"
+                        class="post_pic">
                 </div>
 
-               <div class="like_comment_counter">
-                   <p class="like-count">436 Likes</p>
-                   <p>45 Comments</p>
-                   <p>32 Shares</p>
-               </div>
+                <div class="like_comment_counter">
+                    <p class="like-count">436 Likes</p>
+                    <p>45 Comments</p>
+                    <p>32 Shares</p>
+                </div>
 
-               <div class="home_middle_bottom_bottom">
-                   <button class="action_btn like">
-                       <i class="fa-regular fa-thumbs-up like_icon"></i><span>Like</span>
-                   </button>
+                <div class="home_middle_bottom_bottom">
+                    <button class="action_btn like">
+                        <i class="fa-regular fa-thumbs-up like_icon"></i><span>Like</span>
+                    </button>
 
-                   <button class="action_btn comment">
-                       <i class="fa-regular fa-comment comment_icon"></i><span>Comment</span>
-                   </button>
+                    <button class="action_btn comment">
+                        <i class="fa-regular fa-comment comment_icon"></i><span>Comment</span>
+                    </button>
 
-                   <button class="action_btn share">
-                       <i class="fa-solid fa-share share_icon"></i><span>Share</span>
-                   </button>
-               </div>
+                    <button class="action_btn share">
+                        <i class="fa-solid fa-share share_icon"></i><span>Share</span>
+                    </button>
+                </div>
 
-               <!-- Comment Section -->
-            <div class="comment_section">
-                <div class="comments_list"></div>
+                <!-- Comment Section -->
+                <div class="comment_section">
+                    <div class="comments_list"></div>
 
-                <div class="comment_input_box">
-                    <img src="../img/profile_pic.jpg" alt="User Profile" class="comment_user_pic">
-        
-                    <div class="comment_field_wrapper">
-                        <input type="text" class="comment_input" placeholder="Write a comment...">
-                        <button class="send_comment_btn" type="button">Post</button>
+                    <div class="comment_input_box">
+                        <img src="../img/profile_pic.jpg" alt="User Profile" class="comment_user_pic">
+
+                        <div class="comment_field_wrapper">
+                            <input type="text" class="comment_input" placeholder="Write a comment...">
+                            <button class="send_comment_btn" type="button">Post</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
             </div>
+           </div>
         </div>
 
-            <!-- =========================
+        <!-- =========================
                         HOME MIDDLE CONTENT END
                 ========================= -->
 
-             <div id="right-sidebar"></div>
+        <div id="right-sidebar"></div>
 
-        </main>
+    </main>
 
 
     <script src="script.js"></script>
