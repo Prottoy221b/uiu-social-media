@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIU Social Media-Registration Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="registration">
+    <div class="left">
+      <img class="logo" src="../img/logo.jpg" alt="Social media logo" />
+      <h1>Your campus, <br />connected.</h1>
+      <p>
+        Join thousands of UIU students and faculty. Share ideas, join clubs,
+        attend events, and stay connected with your university community.
+      </p>
+      <footer>
+        <p>&copy; 2024 UIU Connect · All rights reserved</p>
+      </footer>
+    </div>
+    <div class="right">
+      <div class="registration_section">
+        <div class="signin_createAccount">
+          <button class="signIn" onclick="window.location.href='login.html'">Sign In</button>
+          <button class="Active">Create Account</button>
+        </div>
+        <h1>Join UIU Social Media</h1>
+        <p>Use your official email to register. Accounts are verified by admin.</p>
+        <form class="registration_form">
+
+
+          <label for="name">Full Name</label>
+          <input type="name" class="name_input" name="name" placeholder="e.g Mohammad Ronaldo" />
+          <div class="accountType">
+            <p>Account Type</p>
+            <div class="accountOption">
+              <input type="radio" id="student" name="accountType" value="student" checked>
+              <label for="student">Student</label>
+              <input type="radio" name="accountType" id="faculty" value="faculty">
+              <label for="faculty">Faculty</label>
+            </div>
+          </div>
+          <div class="department">
+            <label for="department">Department</label>
+            <select name="department" id="department" class="department_input">
+              <option value="" disabled selected>Select Department</option>
+              <option value="cse">Computer Science & Engineering</option>
+              <option value="eee">Electrical and Electric Engineering</option>
+              <option value="bba">Business Adminastration</option>
+              <option value="economics">Economics</option>
+              <option value="civil">Civil Engineering</option>
+            </select>
+          </div>
+          <label for="email">University Email</label>
+          <input type="email" name="email" class="email_input" placeholder="example@bscse.uiu.ac.bd">
+          <label for="password">Create Password</label>
+          <input type="password" name="password" class="password_input">
+          <button type="submit" class="requestAccount">Request Account</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

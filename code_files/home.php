@@ -1,3 +1,46 @@
+<?php
+session_start();
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.html");
+    exit();
+}
+include("db.php");
+$user_id = $_SESSION["user_id"];
+$sql = "SELECT name from users where id=?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+$user_name = $user["name"];
+
+$post_sql = "SELECT 
+                posts.id,
+                posts.content,
+                posts.post_type,
+                posts.created_at,
+                users.name,
+                (SELECT COUNT(*) 
+                 FROM likes 
+                 WHERE likes.post_id = posts.id) AS like_count,
+                (SELECT COUNT(*) 
+                 FROM comments 
+                 WHERE comments.post_id = posts.id) AS comment_count
+             FROM posts
+             JOIN users ON posts.user_id = users.id
+             ORDER BY posts.created_at DESC";
+$post_result=$conn->query($post_sql);
+
+
+
+
+?>
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -22,7 +65,22 @@
 
     <main class="home_main">
 
+       
+    <div class="sidebar-column">
+
         <div id="left-sidebar"></div>
+
+        <?php if (strtolower($_SESSION["account_type"] ?? "") === "faculty"): ?>
+
+            <a href="faculty-dashboard.php" class="faculty-dashboard-btn">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                Faculty Dashboard
+            </a>
+
+        <?php endif; ?>
+
+    </div>
+
 
         <!-- =========================
                         HOME MIDDLE CONTENT START
@@ -35,10 +93,10 @@
                     <div class="profile_pic"><img src="../img/profile_pic.jpg" alt="Profile Picture"
                             class="profile_pic" /></div>
                     <div class="post_input"><input type="text" name="" id=""
-                            placeholder="Whats on your mind, Mohammad Ronaldo?"></div>
+                            placeholder="Whats on your mind,<?php echo $user_name; ?>?"></div>
                     <div class="post_create_area">
 
-                        <textarea class="post_text" placeholder="What's on your mind, Mohammad Ronaldo?">
+                        <textarea class="post_text" placeholder="What's on your mind, <?php echo $user_name; ?>">
         </textarea>
 
                         <div class="post_options">
@@ -60,7 +118,7 @@
                     <div class="video"><img src="../img/video_logo.jpg" alt="video logo" class="video_logo">
                         <p>Video</p>
                     </div>
-                    <ddiv class="article"><img src="../img/article_logo.jpg" alt="article logo" class="article_logo">
+                    <div class="article"><img src="../img/article_logo.jpg" alt="article logo" class="article_logo">
                         <p>Article</p>
                 </div>
             </div>
@@ -121,28 +179,26 @@
                     </div>
                 </div>
             </div>
-
-            <div class="home_middle_bottom">
+    <?php while($post= $post_result->fetch_assoc()){ ?>
+            <div class="home_middle_bottom" data-post-id="<?php echo $post['id']; ?>">
                 <div class="home_middle_bottom_top">
                     <img src="../img/bean.jpg" alt="Bean pic">
                     <div class="past_name_time">
-                        <p class="others_name">Kazi Faisal Ahmed</p>
-                        <p>1h ago</p>
+                        <p class="others_name"><?php echo $post["name"]; ?></p>
+                        <p> <?php echo $post["created_at"]; ?></p>
                     </div>
 
                 </div>
                 <div class="middle_posts">
-                    <p>Just wrapped up our team's project on Smart Garbage Management using IoT! 🚀 Three months of
-                        late-night sessions, debugging sessions, and countless cups of tea — totally worth it.
-                        Presenting at the CSE Research Symposium next week. Wish us luck! 💻</p>
+                    <p><?php echo $post["content"]; ?></p>
                     <p class="hash_tags">#UIU #CSE #IoT #SmartCity</p> <img src="../img/post.jpg" alt="Post pic"
                         class="post_pic">
                 </div>
 
                 <div class="like_comment_counter">
-                    <p class="like-count">436 Likes</p>
-                    <p>45 Comments</p>
-                    <p>32 Shares</p>
+                    <p class="like-count"><?php echo $post['like_count']; ?> Likes</p>
+<p class="comment-count"><?php echo $post['comment_count']; ?> Comments</p>
+<p>0 Shares</p>
                 </div>
 
                 <div class="home_middle_bottom_bottom">
@@ -174,7 +230,9 @@
                 </div>
 
             </div>
+            <?php } ?>
            </div>
+        </div>
         </div>
 
         <!-- =========================
